@@ -3,7 +3,7 @@ a=int(input("Enter the value a"))
 b=int(input("Enter the value b"))
 print(a,b)
 temp=a
-a=b
+a=b  
 b=temp
 print(f"a={a} b={b}")
 
