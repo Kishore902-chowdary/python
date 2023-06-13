@@ -1,0 +1,1198 @@
+----># write a program to swap a two numbers with a temporary variable and without a temporary variable.
+a=int(input("Enter the value a"))
+b=int(input("Enter the value b"))
+print(a,b)
+temp=a
+a=b
+b=temp
+print(f"a={a} b={b}")
+
+#without temp variable
+b,a=a,b
+print(f"a={a} b={b}")
+
+a=a+b
+b=a-b
+a=a-b
+print(f"a={a} b={b}")
+
+
+---->
+a=int(input("Enter the decimal value"))
+#by format function
+print("The binary number of ",a," is ",format(a,"b"))
+print("The Octal number of ",a," is ",format(a,"o"))
+print(f"The Hexadecimal number of {a} is {format(a,'x')}" )
+
+#by predefined functions
+print(bin(a),oct(a),hex(a))
+
+
+
+---->
+Arjun=float(input())
+suma=float(input())
+if(Arjun>suma):
+  print("Arjun is taller than Suma")
+  print(f"Arjun height is {format(Arjun*0.3937,'.2f')}")
+  print(f"Suma height is {format(suma*0.3937,'.2f')}")
+else:
+  print("suma is taller than Arjun")
+  print(f"Arjun height is {format(Arjun*0.3937,'.2f')}")
+  print(f"Suma height is {format(suma*0.3937,'.2f')}")
+
+--->
+# Area of triangle by sides
+
+a=int(input("Enter the length of A"))
+b=int(input("Enter the length of B"))
+c=int(input("Enter the length of C"))
+s=(a+b+c)/2
+print((s*(s-a)*(s-b)*(s-c))**(1/2))
+
+
+--->
+days=int(input())     #5768
+years=days//365
+months=(days-(years*365))//30
+day=days-years*365-months*30
+print(f"{years} years, {months} months, {day} days")
+
+
+---->
+#1
+
+a=float(input("Enter marks of subject a"))
+b=float(input("Enter marks of subject a"))
+c=float(input("Enter marks of subject a"))
+d=float(input("Enter marks of subject a"))
+e=float(input("Enter marks of subject a"))
+if(a>=60 and b>=60 and c>=60 and d>=60 and e>=60):
+  per=((a+b+c+d+e)/500)*100
+  print(f"The percentage is {format(per,'.2f')}")
+  if(per>=90):
+    print("Distincition")
+  elif(per>=80 and per<90):
+    print("First class")
+  elif(per>=70 and per<80):
+    print("Second class")
+  elif(per>=60 and per<70):
+    print("Pass")
+  else:
+    print("Fail")
+else:
+  print("Fail")
+  
+---->
+#2
+#write a program read 1-7 numbers and respective name of day
+
+a=int(input("Enter the number(0-7) of day"))
+if(a>=1 and a<=7):
+  if(a==1):
+    print("Monday")
+  elif(a==2):
+    print("Tuesday")
+  elif(a==3):
+    print("wednesday")
+  elif(a==4):
+    print("Thursday")
+  elif(a==5):
+    print("Friday")
+  elif(a==6):
+    print("Saturday")
+  elif(a==7):
+    print("Sunday") 
+else:
+  print("Enter the valid number")
+
+---->
+#3
+# must divisiable by 4,and not divisible 100, divisiable by 400 and 100
+#leap year program
+year=int(input("Enter the year"))
+if(year%4==0 and year>0):
+  if(year%100==0):
+    print("It is not a leap year")
+  elif(year%100==0 and year%400==0):
+    print("It is a leap year")
+  else:
+    print("It is a leap year")
+else:
+  print("It is not a leap year")
+
+---->
+#4
+#roots of quardatic equarion
+a=float(input("Enter the coefficient of x^2"))
+b=float(input("Enter the coefficient of x"))
+c=float(input("Enter the constant"))
+d=((b**2)-4*a*c)
+if(d>0):
+  print("Both roots are real")
+  r1=(-b+(d**(1/2)))/(2*a)
+  print("The first root is",format(r1,'.2f'))
+  r2=(-b-(d**(1/2)))/(2*a)
+  print("The Second root is",format(r2,'.2f'))
+elif(d<0):
+  a1=-b/2*a
+  b1=-(((-d))**(1/2))/2*a
+  r1=a1,"i",b1
+  b1=+(((-((b**2)-4*a*c)))**(1/2))/2*a
+  r2=a1,"-i",b1
+  print("The first root is",r1)
+  print("The Second root is",r2)
+else:
+  r1=(-b+(((b**2)-4*a*c)**(1/2)))/(2*a)
+  print("Both roots are equal",format(r1,'.2f'))
+
+--->
+#5
+
+sales=float(input("Enter the sales"))
+basic=4000
+DA=(basic/100)*110
+conv=500
+if(sales>=100000):
+  HRA=((basic)/100)*10
+  incent=(sales/100)*10
+  bonus=1000
+  print(f"salary={basic+conv+HRA+incent+bonus+DA}")
+else:
+  HRA=((basic)/100)*20
+  incent=(sales/100)*4
+  bonus=500
+  print(f"salary={basic+conv+HRA+incent+bonus+DA}")
+  
+  --->
+  
+  #6
+a=int(input("Enter the number"))
+if(a%5==0 and a%10==0):
+  print(f"{a} Divisiable by both 5 and 10")
+elif(a%5==0 or a%10==0):
+  print(f"{a} Divisiable by 5 or 10")
+else:
+  print("Not divisiable by 5 or 10")
+  
+  --->
+  #7
+a=int(input())
+b=int(input())
+c=int(input())
+if(a<b and a<c):
+  print("a is lesser than b and c")
+else:
+  print("a is not lesser than b and c")
+
+--->
+#8
+n1=float(input("Enter the first number"))
+n2=float(input("Enter the second number"))
+a=int(input("Please enter the choice"))
+if(a==1):
+  print(f"Addition of {n1} and {n2} is {format(n1+n2,'.2f')}")
+elif(a==2):
+  print(f"Subtraction of {n1} and {n2} is {format(n1-n2,'.2f')}")
+elif(a==3):
+  print(f"Multiplication of {n1} and {n2} is {format(n1*n2,'.2f')}")
+elif(a==4):
+  print(f"Division of {n1} and {n2} is {format(n1/n2,'.2f')}")
+else:
+  print("Enter the valid choice")
+  
+ --->
+ #9
+a=int(input("Enter value"))
+a=a*a if a%2==0 else a*a*a
+print(a)
+--->
+#10
+#string methods
+# str.lower(), str.upper, str.isupper(), str.islower()
+temp=input("Enter the temperature").lower()
+hum=input("Enter the humidity").lower()
+if(temp=="warm"):
+  if(hum=="dry"):
+    print("Play Basketball")
+  elif(hum=="humid"):
+    print("Play Tennis")
+elif(temp=="cold"):
+  if(hum=="dry"):
+    print("Play Cricket")
+  elif(hum=="humid"):
+    print("Swim")
+else:
+  print("Enter valid temp and humid")
+  
+  --->
+  #reverse of number
+
+a=int(input("Enter the number"))
+b=""
+while(a>0):
+  rem=a%10
+  b=b+str(rem)
+  a=a//10
+print(int(b))
+
+
+--->
+#1-20(divisiable by 2 or 3 or 5) and sum
+sum=0
+for i in range(1,21):
+  if(i%5==0 or i%2==0 or i%3==0):
+    print(i)
+    sum=sum+i
+print("sum is=",sum)
+
+--->
+#1-20(divisiable by 5) and sum
+sum=0
+for i in range(1,21):
+  if(i%5==0):
+    print(i)
+    sum=sum+i
+print("sum is=",sum)
+
+--->
+a=int(input())
+b=int(input())
+while(a!=0 and b!=0):
+  sum=a+b
+  print(sum)
+  a=int(input())
+  b=int(input())
+
+--->
+i=0
+sum=0
+while(i<=20):
+  if(i%5==0):
+    print(i)
+    sum=sum+i
+  i+=1
+print("sum=",sum)
+
+--->
+sum=0
+while(1):
+  a=int(input())
+  if(a==0):
+    break
+  else:
+    sum=sum+a
+print(sum)
+
+
+---->
+#1
+#factors of a number
+a=int(input())
+for i in range(1,a+1):
+  if(a%i==0):
+    print(i)
+    
+--->
+#2 
+#prime
+a=int(input())
+count=0
+for i in range(1,a+1):
+  if(a%i==0):
+    count=count+1
+if(count==2):
+  print("prime")
+else:
+  print("Composite")
+ --->
+ a='$'
+b="kishore"
+print(b.rjust(20,a))
+--->
+a=int(input("Start num range"))
+b=int(input("End num range"))
+for i in range(a,b+1):
+  count=0
+  for j in range(1,i+1):
+    if(i%j==0):
+      count=count+1
+  
+  if(count==2):
+    print(f"{i} is prime")
+  else:
+    print(f"{i} is not prime")
+
+
+---->
+a=int(input())
+b=0
+while(b<=a):
+  if(b%2==0):
+    print(b)
+  b+=1
+print("out of the loop")
+
+--->
+import textwrap
+a="kwebdkwnkjnckweklwje"
+w=textwrap.TextWrapper(2)
+lis=w.wrap(a)
+for i in lis:
+  print(i)
+  
+  --->
+  a=int(input())
+count=0
+while(a!=0):
+  if(a>0):
+    count+=a
+    a=int(input())
+  else:
+    a=int(input())
+print(count)
+
+--->
+#patterns
+n=int(input())
+for i in range(1,n+1):
+  for j in range(1,n+1):
+    print(j,end="")
+  print()
+  
+
+
+--->
+n=int(input())
+star=input()
+for i in range(1,n+1):
+  for j in range(1,i+1):
+    print(star,end="")
+  print("")
+  
+  --->
+  n=int(input())
+for i in range(1,n+1):
+  for j in range(1,i+1):
+    print(j,end="")
+  print("")
+  
+  
+  --->
+  n=int(input())
+count=0
+for i in range(1,n+1):
+  for j in range(1,i+1):
+    count=count+1
+    print(count,end=" ")
+  print("")
+
+
+--->
+a=int(input())
+for i in range(a):
+    for j in range(a-i):
+        print(" ",end="")
+    for k in range(i):
+        print("*",end=" ")
+    print("")
+        
+        
+  ---->
+  a=int(input())
+i=0
+for i in range(a):
+  for j in range(i):
+    print(" ",end="")
+  for k in range(a-i):
+    print("*",end=" ")
+  print()
+
+----->
+a=int(input())
+i=0
+for i in range(a):
+  for j in range(i):
+    print(" ",end="")
+  for k in range(a-i):
+    print("*",end="")
+  print()
+  
+  
+  --->
+  n=int(input())
+for i in range(1,n+1):
+  for j in range(1,i+1):
+    print("*",end="")
+  print("")
+  
+  --->
+  n=int(input())
+for i in range(1,n+1):
+  for j in range(1,i+1):
+    print(i,end=" ")
+  print("")
+  
+  --->
+  # possible rules for assign
+# special characters are not started on variable (other than _)
+abc=10
+Abs=20
+_abc=30
+_123A=40
+_123=50
+hi="hello"
+
+
+print(abc)
+print(Abs)
+print(_abc)
+print(_123A)
+print(_123)
+
+
+--->
+# functions: id ,type
+a=10
+b=a
+print(id(a))
+print(id(b))
+print(type(a))
+
+-->
+#(\'n remove the left slash||  \n print at some space of next line)
+
+print("hello\'n world")
+print("hello\n world")
+print('hello\'n world')
+print('hello\n world\n welcome\n to\n python')
+a=29.456728
+print(format(a,'.2f'))
+
+#format functions
+a=20
+format(a,"b")   #binary
+format(a,"o")   #octal
+format(a,"x")   #hexadecimal
+
+#predefined functions
+bin(a)
+oct(a)
+hex(a)
+
+--->
+# assign more variables at a time
+a=10
+b=c=d=f=a
+print(a,b,c,d,f)
+a,b,c,d=1,1.0,'a',"abc"
+print(a,b,c,d)
+
+
+
+--->
+#user input functions
+
+a=input("Enter name")
+b=int(input("Enter the integer"))
+c=float(input("Enter the float"))
+
+print(a,b,c)
+
+
+
+--->
+a=input("Enter your first name")
+b=input("Enter your last name")
+print(a+b)
+print(type(a+b))
+
+
+--->
+#implicit typecast
+
+a=10
+b=20.45
+print(a+b) # implicitely convert the 'a' into higher data type
+
+
+#explicite typecast
+
+a=10
+b="20"
+c=int(b)  #explicitely changing str to integer
+print(a+c)
+
+#int to float
+a=10
+b=float(a)
+print(b)
+
+#float to int
+a=29.34
+b=int(a)
+print(b)
+
+#string to int
+a="2820"
+b=int(a)
+print(b)
+
+#string to float
+a="2981.21"
+b=float(a)
+print(b)
+
+
+
+--->
+#arthemetic operators
+
+
+a=int(input("Enter the value of a"))
+b=int(input("Enter the value of b"))
+add=a+b
+sub=a-b
+mul=a*b
+div=a/b
+mod=a%b
+flo=a//b
+po=a**b
+print("Addition of ",a,"and ",b,"are",add)
+print("subtraction of ",a,"and ",b,"are",sub)
+print("multiplication of ",a,"and ",b,"are",mul)
+print("Division of ",a,"and ",b,"are",div)
+print("mod of ",a,"and ",b,"are",mod)
+print("flor of ",a,"and ",b,"are",flo)
+print("power of ",a,"and ",b,"are",po)
+
+
+--->
+#Arthemitic operations on string
+
+
+#exception (other then add all)
+a=input("Enter the value of a")
+b=input("Enter the value of b")
+add=a+b
+print(a+b)
+
+
+--->
+#Relation or comparision operator with string
+
+a=input("Enter the string a")
+b=input("Enter the string b")
+c=input("Enter the string c")
+eq=(a==b)
+les=(a<b)
+gra=(a>b)   #(compare based on assic values)
+neql=(a!=b)
+cheql=(a<b<c)
+print(eq,les,gra,neql,cheql)
+
+#Relational operator with integers
+
+a=int(input("Enter the value a"))
+b=int(input("Enter the value b"))
+c=int(input("Enter the value c"))
+eq=(a==b)
+les=(a<b)
+gra=(a>b)   #(compare based on assic values)
+neql=(a!=b)
+cheql=(a<b>c)
+print(eq,les,gra,neql,cheql)
+
+
+--->
+#Logical operators
+
+a=int(input("Enter the value a"))
+b=int(input("Enter the value b"))
+check=int(input("Enter the check value"))
+if(a>check and b>check):
+  print("Both a and b are greater than",check)
+elif(a>check or b>check):
+  print(" one should greater then",check)
+else:
+  print("Both are not greater than",check)
+
+
+
+--->
+# ord() and chr() functions
+a='a'
+A='A'
+print(ord(A))
+print(ord(a))
+a=65
+b=97
+print(chr(a))
+print(chr(b))
+
+--->
+a=30              #assign of any datatype directed takes a bool as True
+print(bool(a))
+print(not a)
+e=int(not a)
+print(e)
+print(bool(e))
+
+
+--->
+#Bitwise operator  (&(ampercent),    |(pipeline),     !(not),       ^(cap)-XOR-both same(0) else 1)
+a=int(input())
+b=int(input())
+print(a&b)
+print(a|b)
+print(a^b)
+
+
+
+
+
+--->
+#assignment operators(=, +=(compount assignment))
+
+a=10
+a+=10
+print(a)
+a-=10
+print(a)
+a*=10
+print(a)
+a/=10
+print(a)
+a%=10
+print(a)
+
+--->
+# is operator(is are ==(equal) are same)
+a=10
+b=a
+c=20
+print(a is b)
+print(a is c)
+
+--->
+# membership operator(in,not in) check which is present or not as a give statement
+a="10280"
+print('1' in a)
+print('9' in a)
+print('+' not in a)
+
+
+--->
+#selection statements (if,(if,else),(if,elif,else))
+
+age=int(input("Enter the age"))
+if(age>=18):
+  print("Elgiable to vote")
+else:
+  print("Not elgiable to vote")
+  
+  --->
+  #simple if
+#String methods( isalpha() , isdigit() , isspace() , isalnum(), isupper(), islowwer(), rjust(length,char), ljust(length,char),center(length,char))  length -(starts with 8)
+
+ch=input("Enter the char")
+if(ch.isalpha()):
+  print("The user has entered a character")
+if(ch.isdigit()):
+  print("The user has entered a digit")
+if(ch.isspace()):
+  print("The user has entered a space ")
+  
+  
+  --->
+  #(if else)
+#program to find even or odd
+
+a=int(input("Enter the number"))
+if(a%2==0):
+  print("Entered number is Even")
+else:
+  print("Entered number is Odd")
+  
+  
+  --->
+  #(if elif else)
+
+a=int(input("Enter the number"))
+if(a==0):
+  print("Entered number is zero")
+elif(a>0):
+  print("Entered number is positive")
+else:
+  print("Entered number is negitive")
+  
+  
+  --->
+  # nested if(if inside if)
+
+a=int(input("Enter the number a"))
+b=int(input("Enter thr number b"))
+c=int(input("Enter the number c"))
+if(a>b):
+  if(a>c):
+    print("a is grater")
+  else:
+    print("c is grater")
+elif(b>c):
+  print("b is grater")
+elif(c>b):
+  print("c is greater")
+else:
+  print("All are equal")
+
+
+--->
+a=int(input("Enter the number a"))
+b=int(input("Enter thr number b"))
+c=int(input("Enter the number c"))
+if(a>b):
+  if(b==c):
+    print("b and c are equal , a is grater")
+  elif(a>c):
+    print("a is grater")
+elif(b>c):
+  if(a==b):
+    print(" a and b are equal and grater ")
+  else:
+    print("b is grater")
+else:
+  print("c is greater")
+
+ 
+
+--->
+#loops
+#for
+
+#range function
+for i in range(0,10,2):
+  print(i)
+for i in range(0,-10,-2):
+  print(i)
+
+
+--->
+adding n consucative numbers
+
+n=int(input("Enter the last number"))
+count=0
+for i in range(1,n+1):
+  count=count+i
+print(f"sum of concecetive number from 1 to {n} is {count}")
+
+
+--->
+#while
+a=0
+count=0
+while(a<10):
+  a=a+1
+  count=count+a
+print(f"sum of first 10 cunsugetive number is {count}")
+
+
+--->
+n=int(input())
+count=0
+while(n>0):
+  rem=n%10
+  n=n//10
+  count=count+rem
+print(count)
+
+--->
+#textrap class
+# wraper methods        # l=textwrap.TextWrapper()--method which sets the legth of wrap
+                         # l.wrap(string) -------form list
+
+
+import textwrap
+a="kwebdkwnkjnckweklwje"
+w=textwrap.TextWrapper(2)
+lis=w.wrap(a)
+for i in lis:
+  print(i)
+
+
+
+--->
+#list    #array
+#hetrogeneous
+a=list()
+b=list([1,2,3,4])
+b[0]
+
+
+--->
+#array methods
+#len(arr)----------length of array
+#negitive index starts from last(-1)
+#slicing
+list=[1,2,3,4,5,6]
+list[1:4]#---------------elements between 1 to 3(n-1)  (first parameter is always lesser than second parameter)
+list[0:] #--------------0 index to last index      #always access from left to right
+list[1:5:2] #--------------step is 2 (print 1,3)
+
+
+
+
+--->
+a=[10,20,30,40,50,60,70,80]
+print(a[1:5])
+print(a[0:])
+print(a[-(len(a)-1):-1])
+print(a[0:len(a):2])
+print(a[-1:-len(a)-1:-1])
+
+
+
+--->
+#list aliaising  (at same memory location changing name)
+a=[10,20,30,40,50,60,70,80]
+print(id(a))
+arr=a
+print(a+a)
+print(a*3)
+print(10 in a)
+print(90 not in a)
+print(a is arr)
+print(id(arr))
+
+
+--->
+#delete operator
+a=[10,20,30,40,50,60,70,80]
+del a[-1]
+a is arr    
+print(arr,a)
+print(a)
+
+
+-->
+#mutibility: change element,aliasing(list)
+
+#cloning-----a sub set is assigning to other list(address are differ)
+n_arr=a[ : ]
+print(n_arr)
+print(id(a))
+print(id(n_arr))
+
+-->
+#list comprehension
+a=[10,20,30,40,50,60,70,80]
+b=[i+10 for i in a]
+print(b)
+
+--->
+a=[1,2,3,4,5,6,7,8]
+b=[i for i in a if(i%2==0)]  #[return_value ,   take element from other array,  condition]
+print(b)
+
+-->
+#list methods
+#(append(), insert(), extend(),clear(), copy(), count(), remove(), sum())
+#append
+a=[1,2,3,4,5,6]
+a.append(10)
+print(a)
+
+-->
+#clear()
+a=[1,2,3,4,5,6]
+a.clear()
+print(a)
+
+
+--->
+#extend()
+a=[1,2,3,4,5,6]
+b=[10,20]
+a.extend(b)
+print(a)
+
+
+--->
+#copy()
+a=[1,2,3,4,5,6]
+b=[10,20]
+a=b.copy()
+print(a)
+
+-->
+#remove
+a=[1,2,3,4,5,6]
+a.remove(3)
+print(a)
+
+-->
+#split(),strip()
+a="ejn wjned nwdndol"
+a=a.split()
+print(a)
+a="ejn wjned nwdndol"
+a=a.strip()
+print(type(a))
+
+-->
+#reverse(),sort(),join()
+a=["wef","rferf","rfger"]
+a.reverse()
+print(a)
+a=[1,20,30,4,5]
+a.sort()
+print(a)
+#join()------string function  str.join(arr--note:contain str obj)
+a=["wef","rferf","rfger"]
+b="".join(a)
+print(b)
+
+-->
+#tuple   -------immutuable
+a=(1,2,3)
+print(a)
+b=1,2,3   #default
+print(b)
+a=(2)     #if one element without(,) default taken as int type
+b=(2,)   
+print(type(a))
+print(type(b))
+a=(1,2,3)
+a=list(a)
+print(a)
+#built in function
+# sum(),len(),index a[index],max(),min(),count()
+# slicing same a list
+#operators
+#concatinate(+),multiple(*),del entire tuple,
+
+
+-->
+#list with in a list (multi array)
+a=[[1,2],[3,4]]
+#tuple with in a tuple
+b=((1,2),(3,4))
+#list with in tuple
+c=([1,2],[3,4])
+#typle with in list
+d=[(1,2),(3,4)]
+
+
+--->
+#methods    prameter as(*arg)
+def add(a,*ar):
+  sum=0
+  sum=sum+a
+  for i in ar:
+    sum=sum+i
+  return sum
+p=add(10,20,30,40)
+print(p)
+
+
+-->
+# zip function
+a=(("hi",100),("hello",200))
+b,c=zip(a)
+print(b)
+print(c)
+a=(("hi",100),("hello",200))
+b,c=zip(*a)
+print(b)
+print(c)
+
+-->
+a=(1,2,3,4,5,6,7)
+b=[]
+for i in range(len(a)):
+  if(a[i]%2!=0):
+    b.append(a[i])
+print(tuple(b))
+
+
+--->
+s1=set()
+s2={10,2,30,4,6}
+print(s2)
+ar=[10,20,30,40]
+s3=set(ar)
+print(s3)
+s4={1,2,3,1,1,1,2,2,2}
+print(s4)
+
+--->
+a={1,2,3,4,5}
+b={1,2,10,20,30}
+print(a)
+
+--->
+#immutiable(tuple,int,string ,all the data types)
+
+a=10      #first a is deleted by using garbage collector
+print(id(a))
+a=a+10
+print(id(a))
+
+
+--->
+#add method in set
+a={1,2,3,4,5}
+a.add(25)
+a.add(9)
+print(a)
+
+--->
+#clear method in set
+a={1,2,3,4,5}
+a.clear()
+print(a)
+
+--->
+#remove method in set
+a={1,2,3,4,5}
+a.remove(2)
+print(a)
+
+--->
+#subset metthod in set
+a={1,2,3,4,5}
+b={2,3,4}
+print(b.issubset(a))
+
+--->
+a="hell"
+print(a.ljust(30,'-'))
+print(a.rjust(30,'-'))
+print(a.center(30,'-'))
+
+
+--->
+#read dob,check he/she elgiable to vote
+from datetime import date 
+dob=input("enter by - seperator").split("-")
+pre_date=date.today()
+pre_date=str(pre_date).split("-")
+year_dif=int(pre_date[0])-int(dob[2])
+if(year_dif>=18):
+  print("Elgiable for vote")
+else:
+  print("not Elgiable for vote")
+  
+  
+  --->
+  #dictonary
+a={"name":"kishore","rool":"2025"}
+print(a)
+
+
+--->
+#formating in dictonary
+
+a={"name":"kishore","rool":2025}
+print("name%name%s")
+
+
+--->
+#deleting operators
+a={"name":"kishore","rool":2025}
+del a["name"]
+print(a)
+
+
+--->
+# traverase the dictonary
+    # by loops
+a={"ram":"A","ravi":"B","hari":"c"}
+for i in a:
+  print(f"{i}  {a.get(i)}")
+  
+  
+  --->
+  #factorial of a number
+def fact1(a):
+  fact=1
+  for i in range(1,a+1):
+    fact*=i
+  return fact
+def fact2(a):
+  fact=1
+  for i in range(1,a+1):
+    fact*=i
+  print(fact)
+def fact3():
+  a=int(input())
+  fact=1
+  for i in range(1,a+1):
+    fact*=i
+  print(fact)
+def fact4():
+  a=int(input())
+  fact=1
+  for i in range(1,a+1):
+    fact*=i
+  return fact
+
+
+
+
+k=int(input())
+f1=fact1(k)
+print(f1)
+fact2(k)
+fact3()
+f4=fact4()
+print(f4)
+
+
+-->
+#default parameters
+def area_ci(pi=2,radius=4):   #formal parameters(parameter with in function)
+  print(pi,radius)
+area_ci()
+area_ci(10)
+area_ci(3,4)
+area_ci(radius=3,pi=4)     #actual parameters(parameter while calling function)
+area_ci(20,radius=10) 
+
+
+--->
+#local scope,global scope
+a=10      #global
+def dis():
+  a=20     #local
+  print(a)
+dis()
+
+
+--->
+#recursive functions
+def fibonacci(a,b):
+  c=a+b
+  if(c<=n):
+    print(c,end=" ")
+    a=b
+    b=c
+    fibonacci(a,b)
+n=int(input("Enter the number n "))
+a=0
+b=1
+print(a,b,end=" ")
+fibonacci(a,b)
+
+--->
+
+
+
+  
+
+  
+
+
+
+
+
+
